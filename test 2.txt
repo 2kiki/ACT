@@ -1,0 +1,13 @@
+Hi my name is Sofia.
+I have now started a new line.
+And another new line.
+I wonder what�s happening.
+What we really want to do is save
+A python dictionary like this
+Name=Sofia
+Attitude=rude
+I think we better do some googling.
+How about searching	
+Python how to store a dictionary in a text file
+Love you
+Dad xxx
