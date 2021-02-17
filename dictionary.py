@@ -1,34 +1,39 @@
 import random
 
-player1 = input('Name of player 1 = ')
+# Create empty dictionary
+my_dictionary = {}
 
+# add some items
+my_dictionary['name'] ='kiki'
+my_dictionary['height'] ='perfect'
+
+print(my_dictionary)
+
+# Create dictionary from function
 def charac_creat(name):
-    player1attrib = {"strength":0, "agility":0, "magic":0, "luck":0, "hp":0}    
-    player1attrib['strength'] = random.randint(0,6)
-    player1attrib['agility'] = random.randint(0,6)
-    player1attrib['magic'] = random.randint(0,6)
-    player1attrib['luck'] = random.randint(0,6)
-    player1attrib['hp'] = random.randint(0,6)
+    my_dict = {}
+    my_dict['name'] = name 
+    my_dict['strength'] = random.randint(0,6)
+    my_dict['agility'] = random.randint(0,6)
+    my_dict['magic'] = random.randint(0,6)
+    my_dict['luck'] = random.randint(0,6)
+    my_dict['hp'] = random.randint(0,6)
 
-    return player1attrib
+    return my_dict
 
-# for sub in player1attrib:
-#     for key in sub:
-#         sub[player1attrib] = int(sub[player1attrib])
+player = charac_creat('kiki')
+print(player)
+# Iterate through dictionary, remember a dictionary is made from key, value pairs
+for item in player.items():
+    print(f"item is a pair of values {item}")
 
-print(charac_creat(player1))
+# or can split pair into 2 variables
+for key, value in player.items():
+    print(f"key is {key}. value is {value}")
 
-# def diceroll(sides):
-#     return random.randint(1, sides)
+# Can iterate over just keys or values
+for key in player.keys():
+    print(f"key is {key}")
 
-# for i in range(4):
-#     strength = diceroll(6)
-
-# print(strength)
-
-# stren =[]
-# for i in range(4):
-#    stren.append(random.randint(1, 6))
-# print(stren)
-# print(sorted(stren))
-# #print(l[0:1])
+for value in player.values():
+    print(f"value is {value}")
